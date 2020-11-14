@@ -1,0 +1,38 @@
+{% extends "subastaApp/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<!---BLOCK DE CÓDIGO -->
+
+
+
+{%for vehiculo in vehiculos %}
+
+
+<section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{vehiculo.foto.url}}" alt="" style = "width: 50%">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h4 class="section-heading mb-4" >
+            <span class="section-heading-upper">{{vehiculo.tipo}}</span>
+            <span class="section-heading-upper">{{vehiculo.color}}</span>
+            <span class="section-heading-upper">{{vehiculo.marca}}</span>
+            <span class="section-heading-upper">{{vehiculo.precio}}</span>
+            <span class="section-heading-upper">{{vehiculo.puja}}</span>
+            <span class="section-heading-upper">{{vehiculo.estado}}</span>
+            <span class="section-heading-upper">{{vehiculo.proveedor}}</span>
+          </h4>      
+        </div>
+      </div>
+    </div>
+  </section>
+
+{%endfor %}
+
+
+{% endblock %}
